@@ -48,11 +48,25 @@ VALUES ('Isabel', 35, 'F', CAST('1985-08-02' AS DATE), CURRENT_TIMESTAMP, CURREN
 INSERT INTO dbo.Customer(FirstName, Age, Gender, BirthDate, RegistrationDate, CurrentDate, Note) 
 VALUES ('Teste', 35, 'M', CAST('1985-09-28' AS DATE), CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, 'Teste') 
 
+/*
+Testando CONSTRAINT CHECK Age > 0 em dbo.Customer
+*/
+
 --INSERT INTO dbo.Customer(FirstName, Age, Gender, BirthDate, RegistrationDate, CurrentDate, Note) 
 --VALUES ('Everton', -1, 'M', CAST('1985-09-28' AS DATE), CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, 'Teste') 
 
+/*
+Testando CONSTRAINT CHECK Gender == M || F em dbo.Customer
+*/
+
 --INSERT INTO dbo.Customer(FirstName, Age, Gender, BirthDate, RegistrationDate, CurrentDate, Note) 
 --VALUES ('Everton', 35, 'Z', CAST('1985-09-28' AS DATE), CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, 'Teste') 
+
+/*
+Testando CONSTRAINT DEFAULT 
+							IF Note == ''
+								Note = N\A
+*/
 
 --INSERT INTO dbo.Customer(FirstName, Age, Gender, BirthDate, RegistrationDate, CurrentDate, Note) 
 --VALUES ('Everton', 35, 'M', CAST('1985-09-28' AS DATE), CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, NULL) 
